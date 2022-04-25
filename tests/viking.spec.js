@@ -1,4 +1,4 @@
-const { Soldier, Viking, Saxon, War } = require('./../src/viking');
+const { Soldier, Viking, Saxon, War } = require('../src/viking.js');
 
 describe('Soldier', () => {
   let soldier;
