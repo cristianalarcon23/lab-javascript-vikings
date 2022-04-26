@@ -54,18 +54,18 @@ class War {
     this.saxonArmy = [];
   }
   
-  addViking(Viking) {
-    vikingArmy.unshift(Viking);
+  addViking(viking) {
+    this.vikingArmy.unshift(viking);
   }
   
-  addSaxon(Saxon) {
-    saxonArmy.unshift(Saxon);
+  addSaxon(saxon) {
+    this.saxonArmy.unshift(saxon);
   }
   
   vikingAttack() {
     const saxon = this.saxonArmy[Math.floor(Math.random() * this.saxonArmy.length)];
     const viking = this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)];
-  saxonDamage = this.saxon.receiveDamage(this.vicking.attack());
+  saxonDamage = this.saxon.receiveDamage(this.viking.attack());
   if (this.saxon.health <= 0) {
     this.saxonArmy.splice(this.saxonArmy.indexOf(saxon), 1);
     }
