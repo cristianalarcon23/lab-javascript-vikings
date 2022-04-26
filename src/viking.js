@@ -67,7 +67,7 @@ class War {
     const viking = this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)];
   saxonDamage = this.saxon.receiveDamage(this.vicking.attack());
   if (this.saxon.health <= 0) {
-      this.saxonArmy.push(saxon);
+    this.saxonArmy.splice(this.saxonArmy.indexOf(saxon), 1);
     }
     return saxonDamage;
   }
@@ -77,7 +77,7 @@ class War {
       const viking = this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)];
     vikingDamage = this.viking.receiveDamage(this.saxon.attack());
     if (this.viking.health <= 0) {
-      this.vikingArmy.push(viking);
+      this.vikingArmy.splice(this.vikingArmy.indexOf(viking), 1);
     }
     return vikingDamage;
   }
